@@ -15,4 +15,7 @@ def show_specific_task(request, id):
 
 
 def user_dashboard(request):
-    return render(request, 'user-dashboard.html')
+    return render(request, 'dashboard/user-dashboard.html')
+
+def manager_dashboard(request):
+    return render(request, 'dashboard/manager-dashboard.html')

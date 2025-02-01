@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User DashBoard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="mt-5 max-w-[1400px] mx-auto bg-gray-100">
+    <header class="flex justify-between items-center">
+        <h1 class="font-bold text-3xl">User Dashboard</h1>
+        <div class="flex items-center gap-2">
+            <button class="hover:bg-gray-300 py-3 flex items-center px-3 rounded-full">
+                <i class="fa-regular fa-bell"></i>
+            </button>
+            <button class="w-8 h-8 bg-blue-600 rounded-full text-white">B</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="grid grid-cols-2 lg:grid-cols-4 gap-10">
+            <div class="flex justify-between items-center bg-white py-5 px-3 rounded-md shadow-sm">
+                <div>
+                    <h3 class="text-gray-500 ">Total Task</h3>
+                    <h2 class="text-2xl font-bold">53</h3>
+                    <h3 class="text-gray-500 ">1 last month</h3>
+                </div>
+                <button class="bg-blue-200 py-3 flex items-center px-3 rounded-full">
+                    <i class="fa-solid fa-clipboard"></i>
+                </button>
+            </div>
+            <div class="flex justify-between items-center bg-white py-5 px-3 rounded-md shadow-sm">
+                <div>
+                    <h3 class="text-gray-500 ">Completed Task</h3>
+                    <h2 class="text-2xl font-bold">40</h3>
+                    <h3 class="text-gray-500 ">1 last month</h3>
+                </div>
+                <button class="bg-green-200 py-3 flex items-center px-3 rounded-full">
+                    <i class="fa-solid fa-check"></i>
+                </button>
+            </div>
+            <div class="flex justify-between items-center bg-white py-5 px-3 rounded-md shadow-sm">
+                <div>
+                    <h3 class="text-gray-500 ">Task in Progress</h3>
+                    <h2 class="text-2xl font-bold">14</h3>
+                    <h3 class="text-gray-500 ">2 last month</h3>
+                </div>
+                <button class="bg-yellow-200 py-3 flex items-center px-3 rounded-full">
+                    <i class="fa-regular fa-clock"></i>
+                </button>
+            </div>
+            <div class="flex justify-between items-center bg-white py-5 px-3 rounded-md shadow-sm">
+                <div>
+                    <h3 class="text-gray-500 ">Due Task</h3>
+                    <h2 class="text-2xl font-bold">8</h3>
+                    <h3 class="text-gray-500 ">2 last month</h3>
+                </div>
+                <button class="bg-red-200 py-3 flex items-center px-3 rounded-full">
+                    <i class="fa-solid fa-list-check"></i>
+                </button>
+            </div>
+        </section>
+        
+        {% block task %}
+        
+        {% endblock task %}
+
+    </main>
+</body>
+</html>

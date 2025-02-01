@@ -19,3 +19,9 @@ def user_dashboard(request):
 
 def manager_dashboard(request):
     return render(request, 'dashboard/manager-dashboard.html')
+
+def common_dashboard(request):
+    return render(request, 'dashboard/common-dashboard.html')
+
+def test_file(request):
+    return render(request, 'test.html')

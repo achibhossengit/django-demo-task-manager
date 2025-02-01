@@ -2,3 +2,4 @@ task_env2/
 __pycache__/
 db.sqlite3
 requirements.txt
+node_modules/

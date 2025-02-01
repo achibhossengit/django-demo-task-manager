@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User DashBoard</title>
+    <title>{% block title1 %}{% endblock title1 %}</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="mt-5 max-w-[1400px] mx-auto bg-gray-100">
-    <header class="flex justify-between items-center">
-        <h1 class="font-bold text-3xl">User Dashboard</h1>
+<body class="max-w-[1400px] mx-auto bg-gray-100">
+    <header class="my-5 flex justify-between items-center">
+        <h1 class="font-bold text-3xl">{% block title2 %}{% endblock title2 %}</h1>
         <div class="flex items-center gap-2">
             <button class="hover:bg-gray-300 py-3 flex items-center px-3 rounded-full">
                 <i class="fa-regular fa-bell"></i>
@@ -25,7 +25,7 @@
             <div class="flex justify-between items-center bg-white py-5 px-3 rounded-md shadow-sm">
                 <div>
                     <h3 class="text-gray-500 ">Total Task</h3>
-                    <h2 class="text-2xl font-bold">53</h3>
+                    <h2 class="text-2xl font-bold">53</h2>
                     <h3 class="text-gray-500 ">1 last month</h3>
                 </div>
                 <button class="bg-blue-200 py-3 flex items-center px-3 rounded-full">
@@ -35,7 +35,7 @@
             <div class="flex justify-between items-center bg-white py-5 px-3 rounded-md shadow-sm">
                 <div>
                     <h3 class="text-gray-500 ">Completed Task</h3>
-                    <h2 class="text-2xl font-bold">40</h3>
+                    <h2 class="text-2xl font-bold">40</h2>
                     <h3 class="text-gray-500 ">1 last month</h3>
                 </div>
                 <button class="bg-green-200 py-3 flex items-center px-3 rounded-full">
@@ -45,7 +45,7 @@
             <div class="flex justify-between items-center bg-white py-5 px-3 rounded-md shadow-sm">
                 <div>
                     <h3 class="text-gray-500 ">Task in Progress</h3>
-                    <h2 class="text-2xl font-bold">14</h3>
+                    <h2 class="text-2xl font-bold">14</h2>
                     <h3 class="text-gray-500 ">2 last month</h3>
                 </div>
                 <button class="bg-yellow-200 py-3 flex items-center px-3 rounded-full">
@@ -55,7 +55,7 @@
             <div class="flex justify-between items-center bg-white py-5 px-3 rounded-md shadow-sm">
                 <div>
                     <h3 class="text-gray-500 ">Due Task</h3>
-                    <h2 class="text-2xl font-bold">8</h3>
+                    <h2 class="text-2xl font-bold">8</h2>
                     <h3 class="text-gray-500 ">2 last month</h3>
                 </div>
                 <button class="bg-red-200 py-3 flex items-center px-3 rounded-full">
@@ -69,5 +69,7 @@
         {% endblock task %}
 
     </main>
+
+    {% include "footer.html" %}
 </body>
 </html>

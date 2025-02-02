@@ -9,7 +9,19 @@
     <link rel="stylesheet" href="{% static "CSS/style.css" %}">
 </head>
 <body>
-    <p class="lal-bg">Its all about testing system!</p>
-    <img src="{% static "images/image-1.jpg" %}" alt="">
+    {% comment %} <p class="lal-bg">Its all about testing system!</p> {% endcomment %}
+    {% comment %} <img src="{% static "images/image-1.jpg" %}" alt=""> {% endcomment %}
+
+    <h2>Player of the year:</h2>
+    {% with age=34 %}{% endwith %}
+    <ul >
+    {% for name in names %}
+        {% if name != "Hasan ali" %}
+            <li>{{name}}</li>
+        {% endif %}
+        <h3>{{cnt}}</h3>
+    {% endfor %}
+    </ul>
+    <p>value of age: {{age}}</p>
 </body>
 </html>

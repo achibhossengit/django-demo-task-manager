@@ -24,4 +24,8 @@ def common_dashboard(request):
     return render(request, 'dashboard/common-dashboard.html')
 
 def test_file(request):
-    return render(request, 'test.html')
+    context = {
+        'names': ['Mahmud', 'Ahamed', 'Hasan ali', 'Ali abdal'],
+        'age': 23
+    }
+    return render(request, 'test.html', context)
